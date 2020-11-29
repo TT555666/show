@@ -1,0 +1,63 @@
+{
+    "explorer.confirmDelete": false,
+    "eslint.autoFixOnSave": true,
+    "files.autoSave": "off",
+    "workbench.view.alwaysShowHeaderActions": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.wordWrap": "on",
+    "[vue]": {
+      "editor.defaultFormatter": "octref.vetur"
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "search.followSymlinks": false,
+    "git.suggestSmartCommit": false,
+    "leetcode.endpoint": "leetcode-cn",
+    "leetcode.workspaceFolder": "/Users/tt/Code",
+    "leetcode.defaultLanguage": "javascript",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+  
+  "leetcode.filePath": {
+  
+      "default": {
+          "folder": "",
+          "filename": "${id}.${kebab-case-name}.${ext}"
+      }
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "iceworks.materialSources": [],
+  "iceworks.packageManager": "cnpm",
+  "cSpell.userWords": [
+    "dasdasdasd"
+  ]
+  }
+  

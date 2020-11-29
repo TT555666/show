@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@api": ["src/api"], // 如果要使用index.tsx的，需要配置这个
+      "@api/*": ["src/api/*"], // 要使用别名下的模块的，配置这个。
+      "@utils/*": ["src/utils/*"],
+      "@utils": ["src/utils/index.ts"]
+    }
+  }
+}

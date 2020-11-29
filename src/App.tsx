@@ -1,12 +1,21 @@
-import React from "react";
-import "./App.less";
-import Layout from "./components/layout/Layout";
-function App() {
-  return (
-    <div className="App">
-      <Layout></Layout>
-    </div>
-  );
-}
+import React, { Component } from 'react';
 
+import { Provider } from "react-redux";
+import "./App.less";
+import Router from "./router";
+import store from "./store";
+import { ConfigProvider } from "antd";
+import zhCN from "antd/es/locale/zh_CN";
+class App extends Component {
+  render() { 
+    return (
+      <ConfigProvider locale={zhCN}>
+        <Provider store={store}>
+          <Router />
+        </Provider>
+      </ConfigProvider>
+    );
+  }
+}
+ 
 export default App;
