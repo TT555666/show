@@ -10,6 +10,18 @@ const menuList = [
     roles:["admin","editor","guest"]
   },
   {
+    title: "基建搭建",
+    path: "/draggable",
+    icon: "file",
+    roles:["admin","editor","guest"]
+  },
+  {
+    title: "websocket",
+    path: "/websocket",
+    icon: "file",
+    roles:["admin","editor","guest"]
+  },
+  {
     title: "开发文档",
     path: "/doc",
     icon: "file",

@@ -9,6 +9,7 @@ import './index.less'
 import {login, getUserInfo} from '../../store/actions'
 import Icon from '@ant-design/icons'
 import {State} from '../../store/reducers/index'
+import {Spin} from 'antd'
 const Login = props => {
     const {login, getUserInfo, token} = props
     // const { getFieldDecorator } = form;
@@ -58,33 +59,34 @@ const Login = props => {
     return (
         <DocumentTitle title={'用户登录'}>
             <div className="login-container">
-                {/* onSubmit={handleSubmit} form上没有定义这个方法 */}
-                <Form
-                    className="content"
-                    name="basic"
-                    initialValues={{remember: true}}
-                    onFinish={handleSubmit}
-                    onFinishFailed={onFinishFailed}>
-                    <Form.Item
-                        label="Username"
-                        name="username"
-                        rules={[{required: true, message: 'Please input your username!'}]}>
-                        <Input />
-                    </Form.Item>
+                <Spin spinning={loading}>
+                    <Form
+                        className="content"
+                        name="basic"
+                        initialValues={{remember: true}}
+                        onFinish={handleSubmit}
+                        onFinishFailed={onFinishFailed}>
+                        <Form.Item
+                            label="用户名"
+                            name="username"
+                            rules={[{required: true, message: 'Please input your username!'}]}>
+                            <Input />
+                        </Form.Item>
 
-                    <Form.Item
-                        label="Password"
-                        name="password"
-                        rules={[{required: true, message: 'Please input your password!'}]}>
-                        <Input.Password />
-                    </Form.Item>
+                        <Form.Item
+                            label="密码"
+                            name="password"
+                            rules={[{required: true, message: 'Please input your password!'}]}>
+                            <Input.Password />
+                        </Form.Item>
 
-                    <Form.Item>
-                        <Button type="primary" htmlType="submit">
-                            Submit
-                        </Button>
-                    </Form.Item>
-                </Form>
+                        <Form.Item>
+                            <Button type="primary" htmlType="submit">
+                                Submit
+                            </Button>
+                        </Form.Item>
+                    </Form>
+                </Spin>
             </div>
         </DocumentTitle>
     )

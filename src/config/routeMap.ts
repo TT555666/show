@@ -2,6 +2,8 @@ import Loadable from 'react-loadable';
 import Loading from '../components/Loading'
 const Dashboard = Loadable({loader: () => import(/*webpackChunkName:'Dashboard'*/'../views/dashboard'),loading: Loading});
 const Doc = Loadable({loader: () => import(/*webpackChunkName:'Doc'*/'../views/doc'),loading: Loading});
+const Draggable = Loadable({loader: () => import(/*webpackChunkName:'Doc'*/'../views/draggable'),loading: Loading});
+const Websocket = Loadable({loader: () => import(/*webpackChunkName:'Doc'*/'../views/websocket'),loading: Loading});
 const Guide = Loadable({loader: () => import(/*webpackChunkName:'Guide'*/'../views/guide'),loading: Loading});
 const Explanation = Loadable({loader: () => import(/*webpackChunkName:'Explanation'*/'../views/permission'),loading: Loading});
 const AdminPage = Loadable({loader: () => import(/*webpackChunkName:'AdminPage'*/'../views/permission/adminPage'),loading: Loading});
@@ -9,7 +11,7 @@ const GuestPage = Loadable({loader: () => import(/*webpackChunkName:'GuestPage'*
 const EditorPage = Loadable({loader: () => import(/*webpackChunkName:'EditorPage'*/'../views/permission/editorPage'),loading: Loading});
 const RichTextEditor = Loadable({loader: () => import(/*webpackChunkName:'RichTextEditor'*/'../views/components-demo/richTextEditor'),loading: Loading});
 const Markdown = Loadable({loader: () => import(/*webpackChunkName:'Markdown'*/'../views/components-demo/Markdown'),loading: Loading});
-const Draggable = Loadable({loader: () => import(/*webpackChunkName:'Draggable'*/'../views/components-demo/draggable'),loading: Loading});
+// const Draggable = Loadable({loader: () => import(/*webpackChunkName:'Draggable'*/'../views/components-demo/draggable'),loading: Loading});
 const KeyboardChart = Loadable({loader: () => import(/*webpackChunkName:'KeyboardChart'*/'../views/charts/keyboard'),loading: Loading});
 const LineChart = Loadable({loader: () => import(/*webpackChunkName:'LineChart'*/'../views/charts/line'),loading: Loading});
 const MixChart = Loadable({loader: () => import(/*webpackChunkName:'MixChart'*/'../views/charts/mixChart'),loading: Loading});
@@ -28,6 +30,8 @@ const Bug = Loadable({loader: () => import(/*webpackChunkName:'Bug'*/'../views/b
 export default [
   { path: "/dashboard", component: Dashboard, roles: ["admin","editor","guest"] },
   { path: "/doc", component: Doc, roles: ["admin","editor","guest"] },
+  { path: "/draggable", component: Draggable, roles: ["admin","editor","guest"] },
+  { path: "/websocket", component: Websocket, roles: ["admin","editor","guest"] },
   { path: "/guide", component: Guide, roles: ["admin","editor"] },
   { path: "/permission/explanation", component: Explanation, roles: ["admin"] },
   { path: "/permission/adminPage", component: AdminPage, roles: ["admin"] },
